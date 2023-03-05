@@ -6,22 +6,22 @@ export default function Nav() {
             <ul className='flex gap-x-10'>
                 <li>
                     <a className='hover:text-accent transition' href={'/'}>
-                        Features
+                        Nosotros
                     </a>
                 </li>
                 <li>
                     <a className='hover:text-accent transition' href={'/'}>
-                        About us
+                        Productos
                     </a>
                 </li>
                 <li>
                     <a className='hover:text-accent transition' href={'/'}>
-                        Princing
+                        Trabaja con nosotros
                     </a>
                 </li>
                 <li>
                     <a className='hover:text-accent transition' href={'/'}>
-                        Feedback
+                        Historia
                     </a>
                 </li>
             </ul>

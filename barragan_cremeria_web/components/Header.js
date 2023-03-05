@@ -1,9 +1,10 @@
-
 import React, { useState, useEffect } from 'react';
+import Image from 'next/image'
 // import icons
-import { HiMenuAlt4, HiOutlineX } from 'react-icons/hi';
+import { HiMenuAlt4, HiOutlineX, HiOutlineShoppingCart } from 'react-icons/hi';
 import Nav from "./Nav";
 import MobileNav from "./MobileNav";
+import { header } from "../pages/information";
 
 export default function Header() {
     // mobile nav state
@@ -11,12 +12,16 @@ export default function Header() {
     // header state
     const [isActive, setIsActive] = useState(false);
 
+
     // scroll event
     useEffect(() => {
         window.addEventListener('scroll', () => {
             window.scrollY > 60 ? setIsActive(true) : setIsActive(false);
         });
     });
+
+    const { image } = header;
+
     return (
         <header
             className={`${isActive ? 'lg:top-0 bg-white shadow-2xl' : 'lg:top-[10px]'
@@ -26,6 +31,14 @@ export default function Header() {
                 {/* logo */}
                 <a href='#' data-aos='fade-down' data-aos-delay='1000'>
                     {/* <img src={logo} alt='' /> */}
+                    <Image
+                        className="relative"
+                        src={image}
+                        alt="Next.js Logo"
+                        width={100}
+                        height={100}
+                        priority
+                    />
                 </a>
                 {/* nav - initially hidden - show on desktop mode */}
                 <div
@@ -36,13 +49,7 @@ export default function Header() {
                     <Nav />
                 </div>
                 {/* cta button - initially hidden - show on desktop mode */}
-                <button
-                    className='btn btn-sm btn-outline hidden lg:flex'
-                    data-aos='fade-down'
-                    data-aos-delay='1400'
-                >
-                    Request a demo
-                </button>
+
                 {/* mobile nav trigger btn - hidden on desktop */}
                 <button className='lg:hidden' onClick={() => setMobileNav(!mobileNav)}>
                     {mobileNav ? (

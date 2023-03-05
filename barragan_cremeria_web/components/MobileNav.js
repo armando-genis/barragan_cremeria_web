@@ -5,23 +5,23 @@ export default function MobileNav() {
         <div className='bg-accent/95 w-full h-full'>
             <ul className='h-full flex flex-col justify-center items-center gap-y-8'>
                 <li>
-                    <a className='link text-white text-xl' href={'/'}>
-                        Features
+                    <a className='hover:text-accent transition' href={'/'}>
+                        Nosotros
                     </a>
                 </li>
                 <li>
-                    <a className='link text-white text-xl' href={'/'}>
-                        About us
+                    <a className='hover:text-accent transition' href={'/'}>
+                        Productos
                     </a>
                 </li>
                 <li>
-                    <a className='link text-white text-xl' href={'/'}>
-                        Princing
+                    <a className='hover:text-accent transition' href={'/'}>
+                        Trabaja con nosotros
                     </a>
                 </li>
                 <li>
-                    <a className='link text-white text-xl' href={'/'}>
-                        Feedback
+                    <a className='hover:text-accent transition' href={'/'}>
+                        Historia
                     </a>
                 </li>
             </ul>
